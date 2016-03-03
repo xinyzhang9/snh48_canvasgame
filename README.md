@@ -7,7 +7,7 @@ A - left
 D - right  
 
 # To do list  
-1. make girls running  
-2. detect boundaries  
-3. add sound effect  
+1. make girls running  finished
+2. detect boundaries  finished
+3. add sound effect  finished
 4. add countdown watch  
