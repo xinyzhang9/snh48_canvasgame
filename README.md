@@ -7,7 +7,10 @@ A - left
 D - right  
 
 # To do list  
-1. make girls running  finished
-2. detect boundaries  finished
-3. add sound effect  finished
+1. finished--make girls running  
+2. finished--detect boundaries  
+3. finished--add sound effect  
 4. add countdown watch  
+
+# Screen Shot
+![alt tag](https://raw.githubusercontent.com/xinyzhang9/snh48_canvasgame/master/Screen.png)
