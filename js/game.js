@@ -95,6 +95,8 @@ var update = function (modifier) {
 		&& hero.y <= (girl.y + 32)
 		&& girl.y <= (hero.y + 32)
 	) {
+		var audio = new Audio('./sound/ah.mp3');
+		audio.play();
 		++girlsCaught;
 		reset();
 	}
