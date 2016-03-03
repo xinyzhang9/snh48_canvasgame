@@ -15,8 +15,8 @@ bgImage.onload = function () {
 bgImage.src = "images/background.jpg";
 
 //audio
-var audio_list = ["Blue_Skies","Bumper_Tag","Dub_Spirit","Panama_Hat","Where_I_am_From"];
-var bgm = new Audio('./sound/Where_I_am_From.mp3')
+var audio_list = ["butterfly","summersounds","givemefive","becauselovingyou","tree","cookies"];
+var bgm = new Audio('./sound/summersounds.mp3')
 
 // Hero image
 var heroReady = false;
@@ -65,7 +65,7 @@ var reset = function () {
 	girl.x = 48 + (Math.random() * (canvas.width - 96));
 	girl.y = 48 + (Math.random() * (canvas.height - 96));
 	
-	var mu = Math.floor(Math.random()*5);
+	var mu = Math.floor(Math.random()*6);
 	bgm.src="";
 	bgm = new Audio('./sound/'+audio_list[mu]+'.mp3')
 	bgm.play();
