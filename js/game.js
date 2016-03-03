@@ -78,8 +78,10 @@ var update = function (modifier) {
 	}
 
 	//update girls
+	// var speed_modifier_x = Math.random();
+	// var speed_modifier_y = Math.random();
 	girl.x += girl.speed_x;
-	girl.y += girl.speed_y;
+	girl.y = 400*Math.sin(girl.x/150)+0.5*girl.x;
 
 	if(girl.x <=0 || girl.x >= canvas.width-48){
 		girl.speed_x = -girl.speed_x;
