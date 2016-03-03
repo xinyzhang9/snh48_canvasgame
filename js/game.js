@@ -1,8 +1,9 @@
 // Create the canvas
+var w = window;
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
-canvas.width = 1080;
-canvas.height = 800;
+canvas.width = w.innerWidth
+canvas.height = w.innerHeight
 document.body.appendChild(canvas);
 
 // Background image
@@ -33,7 +34,10 @@ girlImage.src = "images/snh48/zp_"+rand+".jpg";
 var hero = {
 	speed: 256 // movement in pixels per second
 };
-var girl = {};
+var girl = {
+	speed_x: Math.floor(Math.random()*11)-5,
+	speed_y: Math.floor(Math.random()*11)-5
+};
 var girlsCaught = 0;
 
 // Handle keyboard controls
@@ -60,17 +64,28 @@ var reset = function () {
 
 // Update game objects
 var update = function (modifier) {
-	if (38 in keysDown) { // Player holding up
+	if (87 in keysDown) { // Player holding up
 		hero.y -= hero.speed * modifier;
 	}
-	if (40 in keysDown) { // Player holding down
+	if (83 in keysDown) { // Player holding down
 		hero.y += hero.speed * modifier;
 	}
-	if (37 in keysDown) { // Player holding left
+	if (65 in keysDown) { // Player holding left
 		hero.x -= hero.speed * modifier;
 	}
-	if (39 in keysDown) { // Player holding right
+	if (68 in keysDown) { // Player holding right
 		hero.x += hero.speed * modifier;
+	}
+
+	//update girls
+	girl.x += girl.speed_x;
+	girl.y += girl.speed_y;
+
+	if(girl.x <=0 || girl.x >= canvas.width-48){
+		girl.speed_x = -girl.speed_x;
+	}
+	if(girl.y <=0 || girl.y >= canvas.height-48){
+		girl.speed_y = -girl.speed_y;
 	}
 
 	// Are they touching?
@@ -121,7 +136,7 @@ var main = function () {
 };
 
 // Cross-browser support for requestAnimationFrame
-var w = window;
+
 requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
 
 // Let's play this game!

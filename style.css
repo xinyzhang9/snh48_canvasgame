@@ -1,10 +1,8 @@
 #stage{
 	display: inline-block;
 	vertical-align: top;
-	margin-right: 10px;
 }
 #result{
 	display: inline-block;
 	vertical-align: top;
-	margin: 10px;
 }
