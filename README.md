@@ -1,7 +1,7 @@
 # snh48_canvasgame
 Self-made simple chasing game for selected snh48 Nii team members. JavaScript + HTML.  
 # live on  
-https://snhchase.xinyangzhang.com  
+snhchase.xinyangzhang.com  
 # How to play  
 W - up  
 S - down  
